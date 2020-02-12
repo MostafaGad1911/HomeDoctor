@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">184505522138-6mrc13e36plfnblmodf2nuu0c6opfpah.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://fixed-beb5e.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">184505522138</string>
+    <string name="google_api_key" translatable="false">AIzaSyCKxwJxbaLQ8uAE4BQtNZsnMfQANsVrAcg</string>
+    <string name="google_app_id" translatable="false">1:184505522138:android:de4b843ca55739d0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCKxwJxbaLQ8uAE4BQtNZsnMfQANsVrAcg</string>
+    <string name="google_storage_bucket" translatable="false">fixed-beb5e.appspot.com</string>
+    <string name="project_id" translatable="false">fixed-beb5e</string>
+</resources>

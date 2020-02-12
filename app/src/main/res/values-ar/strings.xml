@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Home Doctor</string>
+    <string name="emailhint">أدخل الإيميل الخاص بك</string>
+    <string name="passwordhint">أدخل كلمة المرور الخاصة بك</string>
+    <string name="repasswordhint">أعد كتابة كلمة المرور</string>
+    <string name="userbtn">مستخدم عادى</string>
+    <string name="phonehint">أدخل رقم الهاتف الخاص بك</string>
+    <string name="namehint">أدخل إسمك </string>
+    <string name="loginbtn">تسجيل كمستخدم</string>
+    <string name="doctorbtn">تسجيل كطبيب</string>
+    <string name="registerbtn">تسجيل حساب جديد</string>
+    <string name="spinner_title">نوع الحساب</string>
+    <string name="rememberpassword">تذكر كلمة المرور</string>
+    <string name="createnewaccount">إنشاء حساب جديد</string>
+    <string name="Signup">إنشاء حساب جديد</string>
+
+    <string name="Username">"User Name"</string>
+
+
+    <string name="Submit">"إتمام العملية"</string>
+
+    <string name="Glucose">معدل السكر</string>
+    <string name="BloodPressure">ضغط الدم</string>
+    <string name="Respire">معدل التنفس</string>
+    <string name="Heart">معدل نبضات القلب</string>
+    <string name="temp">درجة حرارة الجسم</string>
+
+    <string name="submit">إرسال البيانات</string>
+
+</resources>

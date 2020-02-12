@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#135674"
+    android:orientation="vertical"
+    android:gravity="center_horizontal|center_vertical"
+    tools:context="projects.mostafagad.Diploma.activities.splashscreen">
+
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/logo"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Doctor"
+        android:textColor="#CECEC7"
+        android:textStyle="bold"
+        android:textSize="@dimen/_30sdp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/facebook"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/youtube"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/twitter"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

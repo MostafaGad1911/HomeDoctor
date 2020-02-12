@@ -1,0 +1,4 @@
+# Referenced at D:\AndroidDevelopment\Old Projects\Home Doctor\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:28
+-keep class HomeDoctor.MyApp { <init>(); }
+# Referenced at D:\AndroidDevelopment\Old Projects\Home Doctor\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:28
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
