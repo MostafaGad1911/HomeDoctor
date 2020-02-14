@@ -1,4 +1,4 @@
-projects.mostafagad.fixed
+projects.mostafagad.homedoctor
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -580,6 +580,23 @@ attr mpb_secondaryProgressTintMode
 attr mpb_setBothDrawables
 attr mpb_showProgressBackground
 attr mpb_useIntrinsicPadding
+attr ms_arrow_tint
+attr ms_background_color
+attr ms_background_selector
+attr ms_dropdown_height
+attr ms_dropdown_max_height
+attr ms_hide_arrow
+attr ms_hint
+attr ms_hint_color
+attr ms_padding_bottom
+attr ms_padding_left
+attr ms_padding_right
+attr ms_padding_top
+attr ms_popup_padding_bottom
+attr ms_popup_padding_left
+attr ms_popup_padding_right
+attr ms_popup_padding_top
+attr ms_text_color
 attr multiChoiceItemLayout
 attr navigationContentDescription
 attr navigationIcon
@@ -1902,6 +1919,11 @@ dimen md_simplelistitem_padding_top
 dimen md_title_frame_margin_bottom
 dimen md_title_frame_margin_bottom_less
 dimen md_title_textsize
+dimen ms__item_height
+dimen ms__padding_left
+dimen ms__padding_top
+dimen ms__popup_padding_left
+dimen ms__popup_padding_top
 dimen mtrl_alert_dialog_background_inset_bottom
 dimen mtrl_alert_dialog_background_inset_end
 dimen mtrl_alert_dialog_background_inset_start
@@ -2196,6 +2218,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable back_app
+drawable back_appe
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2213,18 +2236,23 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable edittextborder
 drawable ic_account_box_white_24dp
+drawable ic_blood_pressure
 drawable ic_calendar_black_24dp
+drawable ic_call
 drawable ic_call_red_600_24dp
 drawable ic_clear_black_24dp
 drawable ic_delete_white_24dp
 drawable ic_edit_black_24dp
 drawable ic_email
 drawable ic_email_white_24dp
+drawable ic_heartbeat
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_lock_black_24dp
 drawable ic_lock_white_24dp
 drawable ic_logout
+drawable ic_logoute
+drawable ic_lungs
 drawable ic_mail_white_24dp
 drawable ic_menu_arrow_down_black_24dp
 drawable ic_menu_arrow_up_black_24dp
@@ -2234,6 +2262,8 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_phone_white_24dp
 drawable ic_send_red_700_24dp
+drawable ic_sugar
+drawable ic_thermometer
 drawable logo
 drawable md_btn_selected
 drawable md_btn_selected_dark
@@ -2248,6 +2278,12 @@ drawable md_nav_back
 drawable md_selector
 drawable md_selector_dark
 drawable md_transparent
+drawable ms__arrow
+drawable ms__drawable
+drawable ms__drop_down_shadow
+drawable ms__menu_down
+drawable ms__selector
+drawable ms__shadow_background
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2421,6 +2457,7 @@ id extra_large
 id fade
 id fill
 id fill_horizontal
+id fill_parent
 id fill_vertical
 id filled
 id fitToContents
@@ -2473,6 +2510,7 @@ id mail
 id mailRegister
 id maillogin
 id masked
+id match_parent
 id md_buttonDefaultNegative
 id md_buttonDefaultNeutral
 id md_buttonDefaultPositive
@@ -2652,6 +2690,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triplex
+id tv_tinted_spinner
 id unchecked
 id uniform
 id unlabeled
@@ -2769,6 +2808,7 @@ layout md_stub_progress_indeterminate
 layout md_stub_progress_indeterminate_horizontal
 layout md_stub_titleframe
 layout md_stub_titleframe_lesspadding
+layout ms__list_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2816,6 +2856,7 @@ layout sdp_example
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout special_item
 layout spinneritem
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
@@ -2836,6 +2877,7 @@ mipmap doctor
 mipmap facebook
 mipmap glucoseicon
 mipmap heartrateicon
+mipmap ic_icon
 mipmap ic_launcher_round
 mipmap respirationicon
 mipmap tempicon
@@ -2876,8 +2918,6 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
-string action_sign_in
-string action_sign_in_short
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2890,11 +2930,7 @@ string createnewaccount
 string default_web_client_id
 string doctorbtn
 string emailhint
-string error_field_required
 string error_icon_content_description
-string error_incorrect_password
-string error_invalid_email
-string error_invalid_password
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -2905,9 +2941,10 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_key
 string google_storage_bucket
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string loginbtn
+string mail
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -2949,11 +2986,8 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string permission_rationale
 string phonehint
 string project_id
-string prompt_email
-string prompt_password
 string registerbtn
 string rememberpassword
 string repasswordhint
@@ -2962,8 +2996,6 @@ string spinner_title
 string status_bar_notification_info_overflow
 string submit
 string temp
-string title_activity_login
-string title_activity_maps
 string userbtn
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -3733,6 +3765,7 @@ styleable MaterialCheckBox buttonTint useMaterialThemeColors
 styleable MaterialProgressBar mpb_determinateCircularProgressStyle mpb_indeterminateTint mpb_indeterminateTintMode mpb_progressBackgroundTint mpb_progressBackgroundTintMode mpb_progressStyle mpb_progressTint mpb_progressTintMode mpb_secondaryProgressTint mpb_secondaryProgressTintMode mpb_setBothDrawables mpb_showProgressBackground mpb_useIntrinsicPadding
 styleable MaterialRadioButton useMaterialThemeColors
 styleable MaterialShape shapeAppearance shapeAppearanceOverlay
+styleable MaterialSpinner ms_arrow_tint ms_background_color ms_background_selector ms_dropdown_height ms_dropdown_max_height ms_hide_arrow ms_hint ms_hint_color ms_padding_bottom ms_padding_left ms_padding_right ms_padding_top ms_popup_padding_bottom ms_popup_padding_left ms_popup_padding_right ms_popup_padding_top ms_text_color
 styleable MaterialTextAppearance android_lineHeight lineHeight
 styleable MaterialTextView android_textAppearance android_lineHeight lineHeight
 styleable MenuGroup android_enabled android_id android_visible android_menuCategory android_orderInCategory android_checkableBehavior

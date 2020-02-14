@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="projects.mostafagad.fixed"
+    package="projects.mostafagad.homedoctor"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="17"
-        android:targetSdkVersion="26" />
+        android:targetSdkVersion="28" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -35,7 +35,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/doctor"
         android:supportsRtl="false"
-        android:theme="@style/Theme.Design.NoActionBar" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="HomeDoctor.ui.Register"
             android:screenOrientation="portrait" />
@@ -51,6 +51,7 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -66,7 +67,7 @@
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="projects.mostafagad.fixed.lifecycle-process"
+            android:authorities="projects.mostafagad.homedoctor.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" />
     </application>

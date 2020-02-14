@@ -64,15 +64,16 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatSpinner
+        <com.jaredrummler.materialspinner.MaterialSpinner
             android:id="@+id/spinner"
             android:layout_width="@dimen/_280sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:popupBackground="#135674"
-            android:prompt="@string/spinner_title"
-            android:spinnerMode="dropdown"
-            android:textAlignment="center" />
+            app:ms_arrow_tint="@color/green"
+            app:ms_text_color="@color/colorBlueMidnight"
+            android:background="@drawable/edittextborder"
+            app:ms_background_color="@android:color/white"
+            />
 
 
         <androidx.appcompat.widget.AppCompatTextView

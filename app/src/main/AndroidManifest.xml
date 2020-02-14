@@ -28,7 +28,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/doctor"
         android:supportsRtl="false"
-        android:theme="@style/Theme.Design.NoActionBar"
+        android:theme="@style/AppTheme"
         tools:replace="android:supportsRtl">
         <activity android:name="HomeDoctor.ui.Register"
             android:screenOrientation="portrait"

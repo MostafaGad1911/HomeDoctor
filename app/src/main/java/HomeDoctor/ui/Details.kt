@@ -2,25 +2,27 @@ package HomeDoctor.ui
 
 import HomeDoctor.ViewModel.HomeDoctorViewModel
 import HomeDoctor.Views.details_view
-import android.Manifest
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
-import com.karumi.dexter.Dexter
+import com.appizona.yehiahd.fastsave.FastSave
 import mostafa.projects.dagger2.Component.DaggerMainComponent
 import mostafa.projects.dagger2.Component.MainComponent
 import projects.mostafagad.Diploma.R
 
-class Details : AppCompatActivity() , details_view{
+class Details : AppCompatActivity() , details_view , View.OnClickListener{
 
     lateinit var recyclerUsers:RecyclerView
     lateinit var loading_lyt:LinearLayout
+    lateinit var logout:ImageView
 
     lateinit var mainComponent: MainComponent
     var doubleBackToExitPressedOnce: Boolean = false
@@ -35,11 +37,13 @@ class Details : AppCompatActivity() , details_view{
         getDetails()
         observeDetails()
         observeDetailsError()
+        logout.setOnClickListener(this)
     }
 
     override fun initViews() {
         recyclerUsers = findViewById(R.id.recyclerUsers)
         loading_lyt = findViewById(R.id.loading_lyt)
+        logout = findViewById(R.id.logout)
     }
 
     override fun initObjects() {
@@ -88,5 +92,16 @@ class Details : AppCompatActivity() , details_view{
 
     override fun hideLoading() {
         loading_lyt.visibility = View.GONE
+    }
+
+    override fun onClick(p0: View?) {
+        when(p0!!.id){
+            R.id.logout -> {
+                FastSave.getInstance().deleteValue("mail")
+                FastSave.getInstance().deleteValue("password")
+                startActivity(Intent(this , Login::class.java))
+            }
+
+        }
     }
 }
