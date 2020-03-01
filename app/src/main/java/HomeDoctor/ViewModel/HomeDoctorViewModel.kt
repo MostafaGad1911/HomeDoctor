@@ -10,7 +10,6 @@ import org.json.JSONArray
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Field
 
 class HomeDoctorViewModel : ViewModel() {
 
@@ -229,15 +228,15 @@ class HomeDoctorViewModel : ViewModel() {
                         val detailsArr = JSONArray(response.body()!!.string())
                         val detailList = ArrayList<Detail>()
                         for (i in 0 until detailsArr.length()) {
-                            var detail = mainComponent.connect().provideDetails(
-                                    detailsArr.getJSONObject(i).getString("email"),
-                                    detailsArr.getJSONObject(i).getString("phone"),
-                                    detailsArr.getJSONObject(i).getString("BodyTemperature"),
-                                    detailsArr.getJSONObject(i).getString("Gluocose"),
-                                    detailsArr.getJSONObject(i).getString("BloodPressure"),
-                                    detailsArr.getJSONObject(i).getString("Respirationrate"),
-                                    detailsArr.getJSONObject(i).getString("HeartRate")
-                            )
+                            val detail = Detail.Builder()
+                                    .email(detailsArr.getJSONObject(i).getString("email"))
+                                    .phone(detailsArr.getJSONObject(i).getString("phone"))
+                                    .temperature(detailsArr.getJSONObject(i).getString("BodyTemperature"))
+                                    .glucose(detailsArr.getJSONObject(i).getString("Gluocose"))
+                                    .bloodP(detailsArr.getJSONObject(i).getString("BloodPressure"))
+                                    .respiration(detailsArr.getJSONObject(i).getString("Respirationrate"))
+                                    .heart(detailsArr.getJSONObject(i).getString("HeartRate"))
+                                    .build()
                             detailList.add(detail)
                         }
                         Details_result.value = detailList

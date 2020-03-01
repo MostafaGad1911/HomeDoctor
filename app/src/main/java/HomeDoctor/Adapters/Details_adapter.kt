@@ -3,7 +3,6 @@ package HomeDoctor.Adapters
 import HomeDoctor.Models.Detail
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -14,7 +13,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
@@ -44,15 +42,15 @@ class Details_adapter(val Details_list: ArrayList<Detail> , val ctx: Activity) :
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(holder: ViewHolderr , position: Int) {
        val detail = Details_list.get(position)
-       holder.username.setText(detail.email)
-       holder.gluocosevalue.setText(detail.glucose)
-       holder.bloodPressurevalue.setText(detail.bloodP)
-       holder.heartratevalue.setText(detail.heart)
-       holder.respirationratevalue.setText(detail.respiration)
-       holder.temperaturevalue.setText(detail.temperature)
+        holder.username.text = detail.email
+        holder.gluocosevalue.text = detail.glucose
+        holder.bloodPressurevalue.text = detail.bloodP
+        holder.heartratevalue.text = detail.heart
+        holder.respirationratevalue.text = detail.respiration
+        holder.temperaturevalue.text = detail.temperature
        holder.callImg.setOnClickListener(object : View.OnClickListener{
            override fun onClick(view: View?) {
-               val call_number: String = detail.phone.trim()
+               val call_number: String = detail.phone!!.trim()
                if (!call_number.equals("", ignoreCase = true) || !call_number.equals(null, ignoreCase = true)) {
                    val uri = "tel:$call_number"
                    callServiceProvider(uri)
