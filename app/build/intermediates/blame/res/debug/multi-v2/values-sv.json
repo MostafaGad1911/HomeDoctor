@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidDevelopment\\Old Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
+            "outputFile": "D:\\AndroidDevelopment\\Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\59ac33c748bc476362031195a9b4be6c\\appcompat-1.1.0\\res\\values-sv\\values-sv.xml",

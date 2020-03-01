@@ -228,7 +228,7 @@ class HomeDoctorViewModel : ViewModel() {
                         val detailsArr = JSONArray(response.body()!!.string())
                         val detailList = ArrayList<Detail>()
                         for (i in 0 until detailsArr.length()) {
-                            val detail = Detail.Builder()
+                            val detail =  mainComponent.connect().provideDetails()
                                     .email(detailsArr.getJSONObject(i).getString("email"))
                                     .phone(detailsArr.getJSONObject(i).getString("phone"))
                                     .temperature(detailsArr.getJSONObject(i).getString("BodyTemperature"))

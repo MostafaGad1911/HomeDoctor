@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidDevelopment\\Old Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "D:\\AndroidDevelopment\\Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\9b17f13b3f3241ee606a4c50d03a991e\\core-1.1.0\\res\\values-v21\\values-v21.xml",
@@ -42,25 +42,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\20c1b37bb65a632ff59e3f494120c186\\jetified-core-0.9.4.5\\res\\values-v21\\values-v21.xml",
-                    "from": {
-                        "startLines": "2,13",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,780",
-                        "endLines": "12,23",
-                        "endColumns": "10,10",
-                        "endOffsets": "775,1492"
-                    },
-                    "to": {
-                        "startLines": "248,259",
-                        "startColumns": "4,4",
-                        "startOffsets": "18588,19313",
-                        "endLines": "258,269",
-                        "endColumns": "10,10",
-                        "endOffsets": "19308,20025"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\d6e19d00ffd044317f9c840b3608b911\\material-1.2.0-alpha02\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,15,16,19,24,35,41,47,53,59,65,69,72,75,78,81,85,89",
@@ -77,6 +58,25 @@
                         "endLines": "3,4,5,6,7,8,9,10,11,12,79,239,242,247,280,286,346,352,358,364,368,371,374,377,380,392,396,399",
                         "endColumns": "67,78,87,87,87,87,86,86,86,86,10,115,10,12,10,10,10,10,10,10,10,10,10,10,10,10,10,10",
                         "endOffsets": "222,301,389,477,565,653,740,827,914,1001,6879,18092,18262,18583,21054,21511,25364,25708,26058,26408,26801,27019,27241,27467,27683,28434,28693,28870"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\9c4ad47c575eee63d9a269d462202720\\jetified-core-0.9.4.5\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,13",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,780",
+                        "endLines": "12,23",
+                        "endColumns": "10,10",
+                        "endOffsets": "775,1492"
+                    },
+                    "to": {
+                        "startLines": "248,259",
+                        "startColumns": "4,4",
+                        "startOffsets": "18588,19313",
+                        "endLines": "258,269",
+                        "endColumns": "10,10",
+                        "endOffsets": "19308,20025"
                     }
                 },
                 {

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidDevelopment\\Old Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
+            "outputFile": "D:\\AndroidDevelopment\\Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\9b17f13b3f3241ee606a4c50d03a991e\\core-1.1.0\\res\\values-te\\values-te.xml",

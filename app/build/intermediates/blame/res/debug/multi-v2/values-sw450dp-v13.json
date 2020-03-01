@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidDevelopment\\Old Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw450dp-v13\\values-sw450dp-v13.xml",
+            "outputFile": "D:\\AndroidDevelopment\\Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw450dp-v13\\values-sw450dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\94c5efd1cf233a1252f4b5e5d9eac2de\\sdp-android-1.0.5\\res\\values-sw450dp-v13\\values-sw450dp-v13.xml",

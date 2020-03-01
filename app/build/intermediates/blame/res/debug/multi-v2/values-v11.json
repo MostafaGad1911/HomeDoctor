@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidDevelopment\\Old Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "D:\\AndroidDevelopment\\Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\20c1b37bb65a632ff59e3f494120c186\\jetified-core-0.9.4.5\\res\\values-v11\\values-v11.xml",
+                    "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\9c4ad47c575eee63d9a269d462202720\\jetified-core-0.9.4.5\\res\\values-v11\\values-v11.xml",
                     "from": {
                         "startLines": "2,19",
                         "startColumns": "4,4",

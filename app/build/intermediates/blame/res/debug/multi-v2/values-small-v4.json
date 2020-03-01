@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidDevelopment\\Old Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
+            "outputFile": "D:\\AndroidDevelopment\\Projects\\Home Doctor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Go\\.gradle\\caches\\transforms-2\\files-2.1\\d6e19d00ffd044317f9c840b3608b911\\material-1.2.0-alpha02\\res\\values-small-v4\\values-small-v4.xml",

@@ -16,7 +16,8 @@ constructor(
 
 ) {
 
-    data class Builder(var email: String? = null
+
+    data class Builder (var email: String? = null
                        , var phone: String? = null
                        , var temperature: String? = null
                        , var glucose: String? = null

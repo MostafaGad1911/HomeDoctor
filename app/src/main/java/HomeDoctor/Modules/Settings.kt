@@ -32,8 +32,8 @@ class Settings @Inject constructor() {
     }
 
     @Provides
-    fun provideDetails(mail:String , phone:String , temp:String , glucose:String , blood:String , respire:String , heart:String):Detail{
-        return Detail(email = mail , phone = phone , temperature = temp , glucose = glucose , bloodP = blood , respiration = respire , heart = heart)
+    fun provideDetails():Detail.Builder{
+        return Detail.Builder()
     }
 
     @Provides

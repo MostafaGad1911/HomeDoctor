@@ -9,43 +9,21 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class Detail_Factory implements Factory<Detail> {
-  private final Provider<String> emailProvider;
+  private final Provider<String> bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider;
 
-  private final Provider<String> phoneProvider;
-
-  private final Provider<String> temperatureProvider;
-
-  private final Provider<String> glucoseProvider;
-
-  private final Provider<String> bloodPProvider;
-
-  private final Provider<String> respirationProvider;
-
-  private final Provider<String> heartProvider;
-
-  public Detail_Factory(Provider<String> emailProvider, Provider<String> phoneProvider,
-      Provider<String> temperatureProvider, Provider<String> glucoseProvider,
-      Provider<String> bloodPProvider, Provider<String> respirationProvider,
-      Provider<String> heartProvider) {
-    this.emailProvider = emailProvider;
-    this.phoneProvider = phoneProvider;
-    this.temperatureProvider = temperatureProvider;
-    this.glucoseProvider = glucoseProvider;
-    this.bloodPProvider = bloodPProvider;
-    this.respirationProvider = respirationProvider;
-    this.heartProvider = heartProvider;
+  public Detail_Factory(
+      Provider<String> bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider) {
+    this.bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider = bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider;
   }
 
   @Override
   public Detail get() {
-    return new Detail(emailProvider.get(), phoneProvider.get(), temperatureProvider.get(), glucoseProvider.get(), bloodPProvider.get(), respirationProvider.get(), heartProvider.get());
+    return new Detail(bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider.get(), bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider.get(), bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider.get(), bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider.get(), bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider.get(), bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider.get(), bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider.get());
   }
 
-  public static Detail_Factory create(Provider<String> emailProvider,
-      Provider<String> phoneProvider, Provider<String> temperatureProvider,
-      Provider<String> glucoseProvider, Provider<String> bloodPProvider,
-      Provider<String> respirationProvider, Provider<String> heartProvider) {
-    return new Detail_Factory(emailProvider, phoneProvider, temperatureProvider, glucoseProvider, bloodPProvider, respirationProvider, heartProvider);
+  public static Detail_Factory create(
+      Provider<String> bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider) {
+    return new Detail_Factory(bloodPAndEmailAndGlucoseAndHeartAndPhoneAndRespirationAndTemperatureProvider);
   }
 
   public static Detail newInstance(String email, String phone, String temperature, String glucose,
