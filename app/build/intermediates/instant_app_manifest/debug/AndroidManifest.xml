@@ -36,6 +36,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/doctor"
         android:supportsRtl="false"
+        android:testOnly="true"
         android:theme="@style/Theme.Design.NoActionBar" >
         <activity
             android:name="HomeDoctor.ui.Register"
@@ -52,6 +53,7 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
