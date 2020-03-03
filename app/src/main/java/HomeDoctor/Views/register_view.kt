@@ -1,4 +1,4 @@
-package HomeDoctor.Views
+package homedoctor.views
 
 interface register_view {
     fun initViews()

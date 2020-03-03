@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+                 
+                          
+                                             
+           
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_app"
+        android:orientation="vertical" android:tag="layout/activity_results_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp"
+                android:weightSum="5">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_email"
+                    android:scaleType="fitCenter"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:hint="@string/mail"
+                    android:textColorHint="@android:color/white"
+                    android:tag="binding_1"        
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/glucose"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/Glucose"
+                android:inputType="number"
+                android:tag="binding_2"          
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/blood"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/BloodPressure"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:tag="binding_3"         
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/respiration"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/Respire"
+                android:inputType="number"
+                android:tag="binding_4"              
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/heart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/Heart"
+                android:inputType="number"
+                android:tag="binding_5"        
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/temp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/temp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:tag="binding_6"              
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:ellipsize="middle"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/submit"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_25sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/logout"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_logout"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.crystal.crystalpreloaders.widgets.CrystalPreloader
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:crs_pl_bg_color="@color/green"
+                app:crs_pl_fg_color="@color/green"
+                app:crs_pl_size="small"
+                app:crs_pl_style="circular" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+         

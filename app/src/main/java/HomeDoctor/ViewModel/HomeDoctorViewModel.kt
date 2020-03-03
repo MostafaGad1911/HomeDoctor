@@ -1,8 +1,8 @@
-package HomeDoctor.ViewModel
+package homedoctor.viewmodel
 
-import HomeDoctor.Models.Detail
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import homedoctor.models.Detail
 import mostafa.projects.dagger2.Component.DaggerMainComponent
 import mostafa.projects.dagger2.Component.MainComponent
 import okhttp3.ResponseBody
@@ -10,8 +10,9 @@ import org.json.JSONArray
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class HomeDoctorViewModel : ViewModel() {
+class HomeDoctorViewModel : @Inject ViewModel() {
 
     var mainComponent: MainComponent
     var Ulogin_result: MutableLiveData<Int> = MutableLiveData()
@@ -23,6 +24,7 @@ class HomeDoctorViewModel : ViewModel() {
     var EResults_result: MutableLiveData<String> = MutableLiveData()
     var EDetails_result: MutableLiveData<String> = MutableLiveData()
     var ERegister_result: MutableLiveData<String> = MutableLiveData()
+    var email: MutableLiveData<String> = MutableLiveData()
     var Details_result: MutableLiveData<ArrayList<Detail>> = MutableLiveData()
 
     init {
@@ -217,6 +219,13 @@ class HomeDoctorViewModel : ViewModel() {
                 })
     }
 
+    fun setEmail(mail: String){
+        email.value = mail
+    }
+
+    fun getEmail():String{
+        return email.value.toString()
+    }
     fun getDetails() {
         mainComponent.connect().getService().getDetails().enqueue(object : Callback<ResponseBody> {
             override fun onResponse(

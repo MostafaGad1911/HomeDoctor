@@ -1,4 +1,4 @@
-package HomeDoctor.Models
+package homedoctor.models
 
 import java.io.File
 

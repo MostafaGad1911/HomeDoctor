@@ -1,202 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/back_app"
-    tools:context="HomeDoctor.ui.Results"
-    android:orientation="vertical"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data class="projects.mostafagad.Diploma.databinding.ActivityResultsBinding">
+        <variable
+            name="details"
+            type="homedoctor.models.Detail"/>
+    </data>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="9"
-        android:gravity="center">
+        android:background="@drawable/back_app"
+        android:orientation="vertical">
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="5"
-            android:padding="@dimen/_4sdp"
-            >
-            <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp"
+                android:weightSum="5">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_email"
+                    android:scaleType="fitCenter"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:hint="@string/mail"
+                    android:textColorHint="@android:color/white"
+                    android:text="@{details.email}"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/glucose"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/Glucose"
+                android:inputType="number"
+                android:text="@{details.glucose}"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/blood"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/BloodPressure"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:text="@{details.bloodP}"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/respiration"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/Respire"
+                android:inputType="number"
+                android:text="@{details.respiration}"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/heart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/Heart"
+                android:inputType="number"
+                android:text="@{details.heart}"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/temp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.2"
+                android:background="@drawable/edittextborder"
+                android:gravity="center"
+                android:hint="@string/temp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_25sdp"
+                android:text="@{details.temperature}"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:ellipsize="middle"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/submit"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_25sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/logout"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_logout"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.crystal.crystalpreloaders.widgets.CrystalPreloader
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/ic_email"
-                android:scaleType="fitCenter"
-                />
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/mail"
-                android:textColor="#fff"
-                android:text="@string/prompt_email"
-                android:gravity="center_horizontal|center_vertical"
-                android:textStyle="bold"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="@dimen/_20sdp"
-                android:background="@null"
-                />
-        </LinearLayout>
-        <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
-            android:background="@drawable/edittextborder"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:hint="@string/Glucose"
-            android:textSize="@dimen/_25sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:inputType="number"
-            android:id="@+id/glucose"
-            />
-        <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
-            android:background="@drawable/edittextborder"
-            android:hint="@string/BloodPressure"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:textStyle="bold"
-            android:textSize="@dimen/_25sdp"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:inputType="number"
-            android:id="@+id/blood"
-            />
-        <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
-            android:textAlignment="center"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:hint="@string/Respire"
-            android:textSize="@dimen/_25sdp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:background="@drawable/edittextborder"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:inputType="number"
-            android:id="@+id/respiration"
-            />
-        <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
-            android:background="@drawable/edittextborder"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:textAlignment="center"
-            android:hint="@string/Heart"
-            android:textStyle="bold"
-            android:textSize="@dimen/_25sdp"
-            android:gravity="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:inputType="number"
-            android:id="@+id/heart"
-            />
-        <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
-            android:background="@drawable/edittextborder"
-            android:hint="@string/temp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp"
-            android:textStyle="bold"
-            android:textSize="@dimen/_25sdp"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:inputType="number"
-            android:id="@+id/temp"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:orientation="horizontal"
-            >
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/submitBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:text="@string/submit"
-                android:gravity="center_horizontal|center_vertical"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:ellipsize="middle"
-                android:textSize="@dimen/_25sdp"
-                />
-
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="end"
-            android:orientation="horizontal"
-            android:paddingEnd="@dimen/_5sdp"
-            >
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/logout"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_logout"
-                android:scaleType="centerInside"
-
-                />
-
-
-
+                app:crs_pl_bg_color="@color/green"
+                app:crs_pl_fg_color="@color/green"
+                app:crs_pl_size="small"
+                app:crs_pl_style="circular" />
         </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:id="@+id/loading_lyt"
-        android:visibility="gone">
 
-        <com.crystal.crystalpreloaders.widgets.CrystalPreloader
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:crs_pl_bg_color="@color/green"
-            app:crs_pl_fg_color="@color/green"
-            app:crs_pl_size="small"
-            app:crs_pl_style="circular"/>
-    </LinearLayout>
-
-
-
-
-
-</FrameLayout>
+    </FrameLayout>
+</layout>

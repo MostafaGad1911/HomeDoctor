@@ -1,10 +1,10 @@
-package HomeDoctor.Models
+package homedoctor.models
 
 import dagger.Module
 import javax.inject.Inject
 
 @Module
-class Detail @Inject
+data class Detail @Inject
 constructor(
         val email: String?
         , val phone: String?

@@ -1,6 +1,5 @@
-package HomeDoctor.Adapters
+package homedoctor.adapters
 
-import HomeDoctor.Models.Detail
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
@@ -20,6 +19,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
+import homedoctor.models.Detail
 import kotlinx.android.synthetic.main.userrow.view.*
 import projects.mostafagad.Diploma.R
 

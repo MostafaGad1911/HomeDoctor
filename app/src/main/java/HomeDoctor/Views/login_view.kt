@@ -1,4 +1,4 @@
-package HomeDoctor.Views
+package homedoctor.views
 
 interface login_view {
     fun initViews()

@@ -1276,6 +1276,11 @@
     <dimen name="md_title_frame_margin_bottom">12dp</dimen>
     <dimen name="md_title_frame_margin_bottom_less">6dp</dimen>
     <dimen name="md_title_textsize">20sp</dimen>
+    <dimen name="ms__item_height">48dp</dimen>
+    <dimen name="ms__padding_left">24dp</dimen>
+    <dimen name="ms__padding_top">12dp</dimen>
+    <dimen name="ms__popup_padding_left">24dp</dimen>
+    <dimen name="ms__popup_padding_top">12dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_bottom">80dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_end">24dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_start">24dp</dimen>
@@ -1520,6 +1525,7 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="dataBinding" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
     <item name="home" type="id"/>
@@ -1529,6 +1535,8 @@
     <item name="mtrl_card_checked_layer_id" type="id"/>
     <item name="mtrl_child_content_container" type="id"/>
     <item name="mtrl_internal_children_alpha_tag" type="id"/>
+    <item name="onAttachStateChangeListener" type="id"/>
+    <item name="onDateChanged" type="id"/>
     <item name="parent_matrix" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
@@ -1547,6 +1555,7 @@
     <item name="tag_unhandled_key_listeners" type="id"/>
     <item name="text" type="id"/>
     <item name="text2" type="id"/>
+    <item name="textWatcher" type="id"/>
     <item name="textinput_counter" type="id"/>
     <item name="textinput_error" type="id"/>
     <item name="textinput_helper_text" type="id"/>
@@ -1619,8 +1628,6 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">Home Doctor</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
@@ -1633,11 +1640,7 @@
     <string name="default_web_client_id" translatable="false">184505522138-6mrc13e36plfnblmodf2nuu0c6opfpah.apps.googleusercontent.com</string>
     <string name="doctorbtn">Doctor</string>
     <string name="emailhint">Enter Your Email</string>
-    <string name="error_field_required">This field is required</string>
     <string name="error_icon_content_description">Error</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
@@ -1648,9 +1651,10 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCKxwJxbaLQ8uAE4BQtNZsnMfQANsVrAcg</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR_KEY_HERE</string>
     <string name="google_storage_bucket" translatable="false">fixed-beb5e.appspot.com</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
+    <string name="loginbtn">User Login</string>
+    <string name="mail">Email</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string description="Content description for a close icon that lets the user remove content from the screen" name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="mtrl_exceed_max_badge_number_suffix" translatable="false"><ns1:g example="999" id="maximum number">%1$d</ns1:g><ns1:g example="+" id="suffix">%2$s</ns1:g></string>
@@ -1692,13 +1696,8 @@
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
     <string name="phonehint">Enter Your Phone</string>
     <string name="project_id" translatable="false">fixed-beb5e</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
     <string name="registerbtn">Register</string>
     <string name="rememberpassword">Remember Password</string>
     <string name="repasswordhint">Re-Enter Your Password</string>
@@ -1707,8 +1706,6 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="submit">Submit</string>
     <string name="temp">Body Temperature</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="title_activity_maps">Map</string>
     <string name="userbtn">User</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -1726,11 +1723,11 @@
     <item name="android:windowEnterAnimation">@anim/mtrl_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/mtrl_bottom_sheet_slide_out</item>
   </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#e1e1e1</item>
+        <item name="android:layoutDirection">rtl</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -7203,6 +7200,29 @@
     <attr format="reference" name="shapeAppearance"/>
     <!-- Shape appearance overlay style reference to be used to modify the shapeAppearance. -->
     <attr format="reference" name="shapeAppearanceOverlay"/>
+  </declare-styleable>
+    <declare-styleable name="MaterialSpinner" ns2:ignore="ResourceName">
+    <attr format="color" name="ms_arrow_tint"/>
+    <attr format="boolean" name="ms_hide_arrow"/>
+    <attr format="color" name="ms_background_color"/>
+    <attr format="color" name="ms_text_color"/>
+    <attr format="dimension" name="ms_dropdown_max_height"/>
+    <attr format="dimension" name="ms_dropdown_height">
+      <enum name="fill_parent" value="-1"/>
+      <enum name="match_parent" value="-1"/>
+      <enum name="wrap_content" value="-2"/>
+    </attr>
+    <attr format="integer" name="ms_background_selector"/>
+    <attr format="dimension" name="ms_padding_top"/>
+    <attr format="dimension" name="ms_padding_left"/>
+    <attr format="dimension" name="ms_padding_bottom"/>
+    <attr format="dimension" name="ms_padding_right"/>
+    <attr format="dimension" name="ms_popup_padding_top"/>
+    <attr format="dimension" name="ms_popup_padding_left"/>
+    <attr format="dimension" name="ms_popup_padding_bottom"/>
+    <attr format="dimension" name="ms_popup_padding_right"/>
+    <attr format="string" name="ms_hint"/>
+    <attr format="color" name="ms_hint_color"/>
   </declare-styleable>
     <declare-styleable name="MaterialTextAppearance" parent="TextAppearance">
     <!--

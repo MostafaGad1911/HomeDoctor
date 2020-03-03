@@ -1,14 +1,18 @@
-package HomeDoctor.ui
+package homedoctor.ui
 
-import HomeDoctor.ViewModel.HomeDoctorViewModel
-import HomeDoctor.Views.register_view
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import com.jaredrummler.materialspinner.MaterialSpinner
+import homedoctor.viewmodel.HomeDoctorViewModel
+import homedoctor.views.register_view
+import mostafa.projects.dagger2.Component.DaggerMainComponent
+import mostafa.projects.dagger2.Component.MainComponent
 import projects.mostafagad.Diploma.R
 
 class Register : AppCompatActivity(), register_view {
@@ -18,7 +22,7 @@ class Register : AppCompatActivity(), register_view {
     lateinit var RepasswordRegister: EditText
     lateinit var usernameRegister: EditText
     lateinit var phoneRegister: EditText
-    lateinit var special_spinner: Spinner
+    lateinit var special_spinner: MaterialSpinner
     lateinit var loading_lyt: LinearLayout
 
     lateinit var specialists: Array<String>
@@ -29,6 +33,7 @@ class Register : AppCompatActivity(), register_view {
     var re_password: String = ""
     var u_name: String = ""
     var phone: String = ""
+    lateinit var mainComponent: MainComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,53 +41,50 @@ class Register : AppCompatActivity(), register_view {
         initViews()
         initObjects()
         fill_spinner()
-        special_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(adapterView: AdapterView<*>, view: View, i: Int, l: Long) {
-                mail = mailRegister.text.toString().trim()
-                password = passwordRegister.text.toString().trim()
-                re_password = RepasswordRegister.text.toString().trim()
-                phone = phoneRegister.text.toString().trim()
-                u_name = usernameRegister.text.toString().trim()
-                if (i == 1) {
-                    if (mail.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty mail", Toast.LENGTH_SHORT).show()
-                    } else if (u_name.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty user name", Toast.LENGTH_SHORT).show()
-                    } else if (password.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty password", Toast.LENGTH_SHORT).show()
-                    } else if (re_password.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "confirm your password", Toast.LENGTH_SHORT).show()
-                    } else if (phone.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty phone", Toast.LENGTH_SHORT).show()
-                    } else {
-                        showLoading()
-                        observerError()
-                        homeDoctorViewModel.URegister(name = u_name, email = mail, mobile = phone, password = password, c_password = re_password)
-                    }
-                    observeURegister()
-                } else if (i == 2) {
-                    if (mail.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty mail", Toast.LENGTH_SHORT).show()
-                    } else if (u_name.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty user name", Toast.LENGTH_SHORT).show()
-                    } else if (password.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty password", Toast.LENGTH_SHORT).show()
-                    } else if (re_password.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "confirm your password", Toast.LENGTH_SHORT).show()
-                    } else if (phone.isNullOrBlank()) {
-                        Toast.makeText(this@Register, "fill empty phone", Toast.LENGTH_SHORT).show()
-                    } else {
-                        showLoading()
-                        observerError()
-                        homeDoctorViewModel.DRegister(name = u_name, email = mail, mobile = phone, password = password, c_password = re_password)
-                    }
-                    observeDRegister()
+        special_spinner.setOnItemSelectedListener(MaterialSpinner.OnItemSelectedListener<Any?> { view, position, id, item ->
+            mail = mailRegister.text.toString().trim()
+            password = passwordRegister.text.toString().trim()
+            re_password = RepasswordRegister.text.toString().trim()
+            phone = phoneRegister.text.toString().trim()
+            u_name = usernameRegister.text.toString().trim()
+            if (position == 1) {
+                if (mail.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty mail", Toast.LENGTH_SHORT).show()
+                } else if (u_name.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty user name", Toast.LENGTH_SHORT).show()
+                } else if (password.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty password", Toast.LENGTH_SHORT).show()
+                } else if (re_password.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "confirm your password", Toast.LENGTH_SHORT).show()
+                } else if (phone.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty phone", Toast.LENGTH_SHORT).show()
+                } else {
+                    showLoading()
+                    observerError()
+                    homeDoctorViewModel.URegister(name = u_name, email = mail, mobile = phone, password = password, c_password = re_password)
                 }
+                observeURegister()
+            } else if (position == 2) {
+                if (mail.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty mail", Toast.LENGTH_SHORT).show()
+                } else if (u_name.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty user name", Toast.LENGTH_SHORT).show()
+                } else if (password.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty password", Toast.LENGTH_SHORT).show()
+                } else if (re_password.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "confirm your password", Toast.LENGTH_SHORT).show()
+                } else if (phone.isNullOrBlank()) {
+                    Toast.makeText(this@Register, "fill empty phone", Toast.LENGTH_SHORT).show()
+                } else {
+                    showLoading()
+                    observerError()
+                    homeDoctorViewModel.DRegister(name = u_name, email = mail, mobile = phone, password = password, c_password = re_password)
+                }
+                observeDRegister()
             }
+        })
 
-            override fun onNothingSelected(adapterView: AdapterView<*>) {
-            }
-        }
+
     }
 
     override fun initViews() {
@@ -97,7 +99,8 @@ class Register : AppCompatActivity(), register_view {
     }
 
     override fun initObjects() {
-        homeDoctorViewModel = ViewModelProviders.of(this).get(HomeDoctorViewModel::class.java)
+        mainComponent = DaggerMainComponent.create()
+        homeDoctorViewModel = mainComponent.connect().provideViewModel(this)
     }
 
     override fun onBackPressed() {
@@ -152,9 +155,7 @@ class Register : AppCompatActivity(), register_view {
     }
 
     override fun fill_spinner() {
-        specialists = arrayOf<String>("Account Type", "User", "Doctor")
-        var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, specialists)
-        special_spinner.adapter = adapter
+        special_spinner.setItems("Account Type", "User", "Doctor")
     }
 
     override fun showLoading() {

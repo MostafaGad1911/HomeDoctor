@@ -1,17 +1,21 @@
-package HomeDoctor.ui
+package homedoctor.ui
 
-import HomeDoctor.ViewModel.HomeDoctorViewModel
-import HomeDoctor.Views.results_view
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.appizona.yehiahd.fastsave.FastSave
+import homedoctor.models.Detail
+import homedoctor.viewmodel.HomeDoctorViewModel
+import homedoctor.views.results_view
+import mostafa.projects.dagger2.Component.DaggerMainComponent
+import mostafa.projects.dagger2.Component.MainComponent
 import projects.mostafagad.Diploma.R
+import projects.mostafagad.Diploma.databinding.ActivityResultsBinding
 
 class Results : AppCompatActivity() , results_view , View.OnClickListener{
 
@@ -28,24 +32,26 @@ class Results : AppCompatActivity() , results_view , View.OnClickListener{
     var glucoseV:String = ""
     var bloodV:String = ""
     var respirationV:String = ""
+    lateinit var mainComponent: MainComponent
 
     var heartV:String = ""
     var tempV:String = ""
     var doubleBackToExitPressedOnce: Boolean = false
-
+    private lateinit var binding: ActivityResultsBinding
     lateinit var submitBtn:Button
     lateinit var homeDoctorViewModel: HomeDoctorViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_results)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_results)
+        binding.details = Detail("" , "" , "" , "" , "" , "" , "")
         initViews()
         initObjects()
-        mail.text = mails
         submitBtn.setOnClickListener(this)
         logout.setOnClickListener(this)
         observeResults()
+
     }
 
     override fun initViews() {
@@ -61,8 +67,10 @@ class Results : AppCompatActivity() , results_view , View.OnClickListener{
     }
 
     override fun initObjects() {
-        homeDoctorViewModel = ViewModelProviders.of(this).get(HomeDoctorViewModel::class.java)
-        mails = FastSave.getInstance().getString("mail" , "")
+        mainComponent = DaggerMainComponent.create()
+        homeDoctorViewModel = mainComponent.connect().provideViewModel(this)
+        mails = intent.getStringExtra("email")
+        mail.text = mails
     }
 
     override fun observeResults() {

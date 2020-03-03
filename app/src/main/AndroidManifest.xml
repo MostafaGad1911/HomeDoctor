@@ -21,26 +21,26 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name="HomeDoctor.MyApp"
+        android:name="homedoctor.app"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/doctor"
         android:supportsRtl="false"
-        android:theme="@style/Theme.Design.NoActionBar"
+        android:theme="@style/AppTheme"
         tools:replace="android:supportsRtl">
-        <activity android:name="HomeDoctor.ui.Register"
+        <activity android:name="homedoctor.ui.Register"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="HomeDoctor.ui.Details"
+            android:name="homedoctor.ui.Details"
             android:screenOrientation="portrait" />
         <activity
-            android:name="HomeDoctor.ui.Results"
+            android:name="homedoctor.ui.Results"
             android:screenOrientation="portrait" />
         <activity
-            android:name="HomeDoctor.ui.Login"
+            android:name="homedoctor.ui.Login"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>

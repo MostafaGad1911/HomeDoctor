@@ -1,4 +1,4 @@
-package HomeDoctor.Views
+package homedoctor.views
 
 interface details_view {
     fun initViews()

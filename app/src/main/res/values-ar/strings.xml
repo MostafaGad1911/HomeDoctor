@@ -27,5 +27,6 @@
     <string name="temp">درجة حرارة الجسم</string>
 
     <string name="submit">إرسال البيانات</string>
+    <string name="mail">البريد الإلكتروني</string>
 
 </resources>

@@ -7,7 +7,7 @@
 
     <uses-sdk
         android:minSdkVersion="17"
-        android:targetSdkVersion="26" />
+        android:targetSdkVersion="28" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -27,7 +27,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name="HomeDoctor.MyApp"
+        android:name="homedoctor.app"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -37,18 +37,18 @@
         android:roundIcon="@mipmap/doctor"
         android:supportsRtl="false"
         android:testOnly="true"
-        android:theme="@style/Theme.Design.NoActionBar" >
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="HomeDoctor.ui.Register"
+            android:name="homedoctor.ui.Register"
             android:screenOrientation="portrait" />
         <activity
-            android:name="HomeDoctor.ui.Details"
+            android:name="homedoctor.ui.Details"
             android:screenOrientation="portrait" />
         <activity
-            android:name="HomeDoctor.ui.Results"
+            android:name="homedoctor.ui.Results"
             android:screenOrientation="portrait" />
         <activity
-            android:name="HomeDoctor.ui.Login"
+            android:name="homedoctor.ui.Login"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>

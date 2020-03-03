@@ -7,7 +7,7 @@
 7    <uses-sdk
 8        android:minSdkVersion="17"
 8-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="26" />
+9        android:targetSdkVersion="28" />
 9-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -51,8 +51,8 @@
 27
 28    <application
 28-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:23:5-56:19
-29        android:name="HomeDoctor.MyApp"
-29-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:24:9-40
+29        android:name="homedoctor.app"
+29-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:24:9-38
 30        android:allowBackup="true"
 30-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:25:9-35
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -69,29 +69,29 @@
 37        android:supportsRtl="false"
 37-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:30:9-36
 38        android:testOnly="true"
-39        android:theme="@style/Theme.Design.NoActionBar" >
-39-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:31:9-56
+39        android:theme="@style/AppTheme" >
+39-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:31:9-40
 40        <activity
 40-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:33:9-35:15
-41            android:name="HomeDoctor.ui.Register"
+41            android:name="homedoctor.ui.Register"
 41-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:33:19-56
 42            android:screenOrientation="portrait" />
 42-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:34:13-49
 43        <activity
 43-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:36:9-38:52
-44            android:name="HomeDoctor.ui.Details"
+44            android:name="homedoctor.ui.Details"
 44-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:37:13-49
 45            android:screenOrientation="portrait" />
 45-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:38:13-49
 46        <activity
 46-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:39:9-41:52
-47            android:name="HomeDoctor.ui.Results"
+47            android:name="homedoctor.ui.Results"
 47-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:40:13-49
 48            android:screenOrientation="portrait" />
 48-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:41:13-49
 49        <activity
 49-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:42:9-51:20
-50            android:name="HomeDoctor.ui.Login"
+50            android:name="homedoctor.ui.Login"
 50-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:43:13-47
 51            android:screenOrientation="portrait"
 51-->D:\AndroidDevelopment\Projects\Home Doctor\app\src\main\AndroidManifest.xml:44:13-49

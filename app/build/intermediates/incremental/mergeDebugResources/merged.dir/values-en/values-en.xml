@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="BloodPressure">Blood Pressure</string>
+    <string name="Glucose">Glucose</string>
+    <string name="Heart">Heart Rate</string>
+    <string name="Respire">Respiration Rate</string>
+    <string name="Signup">Signing Up . . .</string>
+    <string name="Submit">"Submit"</string>
+    <string name="Username">"User Name"</string>
+    <string name="app_name">Home Doctor</string>
+    <string name="createnewaccount">Create new account</string>
+    <string name="doctorbtn">Doctor</string>
+    <string name="emailhint">Enter Your Email</string>
+    <string name="loginbtn">User Login</string>
+    <string name="mail">Email</string>
+    <string name="namehint">Enter Your Name</string>
+    <string name="passwordhint">Enter Your Password</string>
+    <string name="phonehint">Enter Your Phone</string>
+    <string name="registerbtn">Register</string>
+    <string name="rememberpassword">Remember Password</string>
+    <string name="repasswordhint">Re-Enter Your Password</string>
+    <string name="spinner_title">Account Type</string>
+    <string name="submit">Submit</string>
+    <string name="temp">Body Temperature</string>
+    <string name="userbtn">User</string>
+</resources>
